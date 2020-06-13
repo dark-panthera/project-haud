@@ -1,4 +1,4 @@
-Haud Application - User Management App
+# Haud Application - User Management App
 
 The app makes use of SASS, React with Redux, Hooks for Header control
 
@@ -20,3 +20,19 @@ I avoided redux form and used custom validation instead
 
 # Server Side Rendering
 Uses express + node to serve the site into server side rendering since it runs faster.
+
+# Download
+download the branch
+
+# Install dependencies by yarn or npm
+yarn install
+or
+npm install
+
+# run the app
+yarn run server
+or
+npm run server
+
+# The url
+http://localhost:4000/
