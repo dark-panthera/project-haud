@@ -1,0 +1,34 @@
+.grid {
+    @include grid();
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    font-size: $s-size;
+    
+    @media (max-width: $lg-breakpoint) {
+        display: block;
+    }
+}
+
+.grid--person {
+    font-family: 'Oswald', sans-serif;
+    @include flexbox();
+    @include flexbox-wrap();
+    font-weight: 500;
+
+    @media (max-width: $lg-breakpoint) {
+        @include flexbox-space-around();
+    }
+}
+
+.row {
+    padding: $s-padding;
+}
+
+.space {
+    margin: 0 $s-margin;
+}
+
+.grid--actions {
+    @include flexbox();
+    @include flexbox-row();
+    font-size: $m-size;
+}

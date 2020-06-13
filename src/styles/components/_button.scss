@@ -1,0 +1,59 @@
+.btn {
+    width: $s-width;
+    border: none;
+    border-radius: $m-border-radius;
+    padding: $s-padding;
+
+    @media (max-width: $md-breakpoint) {
+        width: $xl-width;
+        margin: $xs-margin 0;
+    }
+
+    &-container {
+        @include flexbox();
+        @include flexbox-row();
+        @include flexbox-space-evenly();
+
+        @media (max-width: $md-breakpoint) {
+            @include flexbox-flexdirection-column();
+        }
+    }
+
+    &--xs {
+        border: none;
+        padding: 0.2rem 1.4em;
+        border-radius: $m-border-radius;
+    }
+}
+
+.light {
+    color: $light-color;
+}
+
+.primary {
+    background: $primary-color;
+    @extend .light;
+
+    &:hover {
+        background: lighten($primary-color, 10%);
+    }
+}
+
+.warning {
+    background: $warning-color;
+    @extend .light;
+
+    &:hover {
+        background: lighten($warning-color, 10%);
+    }
+}
+
+.danger {
+    background: $danger-color;
+    border: $s-border-radius solid darken($danger-color, 10%);
+    @extend .light;
+
+    &:hover {
+        background: lighten($danger-color, 10%);
+    }
+}

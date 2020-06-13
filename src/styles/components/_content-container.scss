@@ -1,0 +1,14 @@
+.content-container {
+    margin: 0 auto;
+    padding: 0 5.02rem;
+    max-width: $m-width;
+
+    @media (max-width: $md-breakpoint) {
+        padding: 0 4.02rem;
+    }
+}
+
+.content-container-person {
+    margin: 0 auto;
+    max-width: $lg-width;
+}

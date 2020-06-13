@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+
+    @media (max-width: $c-width) {
+        font-size: 2rem;
+    }
+}
+
+.font {
+    font-size: $s-size;
+    font-weight: 600;
+}
+
+.font--primary {
+    @extend .font;
+    color: $primary-color;
+}
+
+.font--danger {
+    @extend .font;
+    color: $danger-color;
+}
+
+.font--secondary {
+    color: $success-color;    
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        color: lighten($success-color, 20%);
+    }
+}

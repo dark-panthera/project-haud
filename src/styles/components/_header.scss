@@ -1,0 +1,42 @@
+.header {
+    color: $secondary-color;
+    background: $primary-color;
+    @include flexbox();
+    @include flexbox-space-around();
+    padding: $s-padding;
+
+    .item {
+        margin: 0 $m-margin;
+        text-decoration: none;
+        color: $gray-color;
+    }
+
+    & ~ a {
+        transition: color 1.5ms ease-out;
+
+        &:hover {
+            cursor: pointer;
+            color: $tertiary-color;
+        }
+    }
+
+    .active {
+        color: $tertiary-color;
+    }
+
+    &__content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: $s-size 0;
+    }
+
+    &__title {
+        color: $light-color;
+        text-decoration: none;
+    
+        h1 {
+            margin: 0;
+        }
+    }
+}

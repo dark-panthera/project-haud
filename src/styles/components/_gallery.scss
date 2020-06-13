@@ -1,0 +1,82 @@
+$shadow: 0 1px 5px rgb(186, 186, 186), 0 0 13px rgba(175, 175, 175, 0.54) inset;
+
+.person-gallery {
+    @include grid();
+    grid-template-areas:
+        "img first_name last_name ."
+        "img address_1 address_1 address_1"
+        "img address_2 address_2 address_2"
+        "img town region country"
+        "img post_code contact_number .";
+    border-radius: $s-border-radius;
+    padding: $s-padding;
+    font-size: $s-size;
+    @include shadow($shadow);
+    margin: $s-margin 0;
+
+    @media (max-width: $xl-breakpoint) {
+        margin: $s-margin;
+        grid-template-areas:
+            "img first_name"
+            "img last_name"
+            "img address_1"
+            "img address_2"
+            "town region"
+            "country post_code"
+            "contact_number .";
+    }
+}
+
+.img {
+    grid-area: img;
+}
+
+.image {
+    width: $xs-width;
+    @include shadow(-1px 0px 9px 2px rgba(136, 136, 136, 0.93));
+    border-radius: $m-border-radius;
+
+    @media (max-width: $xl-breakpoint) {
+        width: $xxs-width;
+    }
+}
+
+.first_name {
+    grid-area: first_name;
+}
+
+.last_name {
+    grid-area: last_name;
+}
+
+.address_1 {
+    grid-area: address_1;
+}
+
+.address_2 {
+    grid-area: address_2;
+}
+
+.town {
+    grid-area: town;
+}
+
+.town {
+    grid-area: town;
+}
+
+.region {
+    grid-area: region;
+}
+
+.country {
+    grid-area: country;
+}
+
+.post_code {
+    grid-area: post_code;
+}
+
+.contact_number {
+    grid-area: contact_number;
+}
